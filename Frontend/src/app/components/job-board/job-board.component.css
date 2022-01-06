@@ -1,0 +1,18 @@
+.hero{
+  background-image: url('./../../../assets/images/homeimg.jpg');
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+}
+
+.dropdown-menu{
+  position: absolute;
+  max-height: 200px;
+  overflow-y: auto;
+  background: lightgrey;
+}
+
+/*.dropdown-toggle{*/
+
+  /*border-radius: 5px;*/
+
+/*}*/

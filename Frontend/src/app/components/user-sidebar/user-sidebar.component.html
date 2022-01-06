@@ -1,0 +1,108 @@
+<ul class="list-group border rounded shadow bg-light" [hidden] = editMode>
+  <!-- <li class="list-group-item border border-light mt-2 bg-light">
+
+    <img src={{imageUrl}} class="rounded"
+         alt="profile picture" width="250px"> -->
+    <!--<button class="btn btn-primary rounded btn-block">-->
+      <!--<i class="fa fa-pencil"></i>-->
+    <!--</button>-->
+  <!-- </li> -->
+  <!-- <li class="list-group-item border border-light mt-0 mb-0 py-1 bg-light"> -->
+      <!--<input type="file" class="form-control-file" id="exampleFormControlFile1">-->
+
+    <!--<form ngNoForm action="https://job-portal-server.herokuapp.com/api/upload"-->
+          <!--method="post"-->
+          <!--enctype="multipart/form-data">-->
+      <!--<input name="myFile"-->
+             <!--type="file"-->
+             <!--class="form-control"/>-->
+      <!--<button type="submit"-->
+              <!--class="btn btn-block btn-primary mt-2 disabled">-->
+        <!--Upload Image-->
+      <!--</button>-->
+    <!--</form>-->
+
+    <!-- <form>
+      <input name="myFile"
+             type="file"
+             class="form-control"/>
+      <button type="button"
+              class="btn btn-block btn-primary mt-2"
+      disabled="true">
+        Upload Image
+      </button>
+    </form>
+
+  </li> -->
+
+  <!-- <li class="list-group-item border border-light bg-light">
+    <span style="font-size: 25px; font-weight: bold;">{{firstName}} {{lastName}} </span>
+  </li> -->
+  <li>
+    <app-personal-info></app-personal-info>
+
+  </li>
+  <!-- <li>
+    <app-education-list></app-education-list>
+
+  </li> -->
+  <!-- <li class="list-group-item border border-light mt-1 py-1 bg-light" ([ngModel])=tagline>
+    <pre
+      class="mx-0 my-0" style="white-space: pre-line; font-size: 22px; color:grey; width: 390px;">
+      {{tagline}}
+      </pre>
+  </li>
+  <li class="list-group-item border border-light mt-1 mb-2 bg-light">
+    <button class="btn btn-primary rounded btn-block" (click)="editBio()">
+      Edit Bio
+    </button>
+  </li> -->
+  <!--<li class="list-group-item border border-white mt-0 py-0 mb-0">-->
+  <!--<hr/>-->
+  <!--</li>-->
+  <!--<li class="list-group-item border border-white mt-1 py-1">-->
+  <!--<pre class="mx-0 my-0" style="white-space: pre-line; font-size: 18px; color:grey;"><i class="fas fa-map-marker-alt"></i>&nbsp;Boston, MA-->
+  <!--<i class="fas fa-envelope"></i>&nbsp;tyagi.k@husky.neu.edu-->
+  <!--</pre>-->
+  <!--</li>-->
+</ul>
+
+<ul class="list-group border rounded shadow bg-light"
+    [hidden]="!editMode">
+  <li class="list-group-item border border-light mt-2 bg-light">
+    <img src={{imageUrl}} class="rounded"
+         alt="profile picture" width="250px">
+  </li>
+  <li class="list-group-item border border-light mt-0 mb-0 py-1 bg-light">
+  <form>
+    <input name="myFile"
+           type="file"
+           class="form-control"/>
+    <button type="button"
+            class="btn btn-block btn-primary mt-2"
+            disabled="true">
+      Upload Image
+    </button>
+  </form>
+  </li>
+
+  <li class="list-group-item border border-light bg-light">
+    <span style="font-size: 25px; font-weight: bold;">{{firstName}} {{lastName}} </span>
+  </li>
+  <li class="list-group-item border border-light mt-1 py-1 bg-light">
+      <textarea class="mx-0 my-0" rows="5" cols="31"
+                [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="tagline"
+                placeholder = "Add Bio">
+      </textarea>
+  </li>
+  <li class="list-group-item border border-light mt-1 mb-2 bg-light">
+    <button class="btn btn-success rounded" (click)="saveBio()">
+      &nbsp;Save&nbsp;
+    </button>
+    <button class="btn btn-grey rounded ml-2" (click)="cancel()">
+      Cancel
+    </button>
+  </li>
+</ul>
+

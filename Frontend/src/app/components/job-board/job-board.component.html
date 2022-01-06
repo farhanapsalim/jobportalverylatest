@@ -1,0 +1,44 @@
+<div class="h-100">
+  <div class="position-relative overflow-hidden p-5 text-center bg-dark text-light hero">
+    <div class="col-md-5 p-lg-5 mx-auto my-5" style="color: #584f4f;">
+      <h1 class="display-4 "  style="font-weight: 600;" >FIND JOBS</h1>
+      <p class="lead " style="font-weight: 600;">Join us to find the best job for you</p>
+      <!-- <div class="row">
+        <div class="col">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id=""><i class="fa fa-search"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Keyword or Title" aria-label="Keyword or Title"
+                   aria-describedby="basic-addon1" [(ngModel)]="keywordOrTitle" name="keywordOrTitle">
+          </div>
+        </div>
+        <div class="col">
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker"></i></span>
+            </div>
+            <input type="text" autocomplete="off" class="form-control dropdown-toggle" id="dropdownMenuLink"
+                   placeholder="Location" aria-label="Location"
+                   aria-describedby="basic-addon1" [(ngModel)]="location"
+                   name="location" data-toggle="dropdown">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+              <div *ngFor = "let state of states | searchFilter: getInputVal()" (click)="setVal(state)"
+                   class="dropdown-item" >{{state}}</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div> -->
+      <button class="btn btn-light w-25"
+              routerLink="/job-list/{{location!='' && location!=null ? location:' '}}/{{keywordOrTitle!='' &&
+              keywordOrTitle!=null? keywordOrTitle: ' '}}">Search</button>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+
+  </div>
+</div>
+<!-- <app-footer></app-footer> -->
